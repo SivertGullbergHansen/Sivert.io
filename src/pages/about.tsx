@@ -9,46 +9,45 @@ function AboutMe() {
   return (
     <ChildrenWrapper variants={topSmall}>
       <p>
-        Hey there! My name is Sivert, and I&apos;ve been a coding enthusiast
+        Hey there!👋
+      </p>
+      <p>My name is Sivert, and I&apos;ve been a coding enthusiast
         ever since I was a kid. I started experimenting with coding at a young
         age, and I&apos;ve been hooked ever since. I now have around 7 years of
         coding experience, and I&apos;ve been working professionally as a
-        front-end developer for about a year.
+        Full-stack developer for about a year.
       </p>
       <p>
-        When I&apos;m not working on client projects, I love spending my
+        When I&apos;m not at work, I love spending my
         evenings working on my own game development projects. I&apos;m a big fan
-        of game engines like Unity, Unreal Engine, and Roblox, and I&apos;ve
-        even gained a following on Twitter where I share sneak peeks of my
-        latest Roblox projects.
+        of game engines like Unity, Unreal Engine and Roblox, and I&apos;ve
+        gained a small following on Twitter where I share sneak peeks of my
+        latest indie dev projects.
       </p>
       <p>
         Growing up, my family and I used to spend our holidays up in the snowy
-        mountains, skiing, hiking, and fishing. Our cabin up there, which my
-        grandfather built, holds many special memories for me. It&apos;s where
-        my brother and I used to play our favorite game, &quot;Lord of the
-        Rings.&quot; I would always be Legolas, son of Thranduil, while my
-        brother would portray Aragorn, son of Arathorn. These childhood memories
-        have stuck with me throughout my life and have given me a deep
-        appreciation for the fantasy genre. I love watching movies and series
-        set in the middle ages, and my favorite game in the Age of Empires
-        series is Age of Empires II.
+        mountains. In winter we would go cross-country skiing, and during summer we would hike and fish. Our cabin up there, which my
+        grandfather built, holds many special memories to me. It&apos;s where my
+        brother and I used to pretend we were the characters from Lord of the
+        Rings, fighting orcs and trolls as if we were the heroes from the movie
+        series (I would be Legolas and he would be Aragorn). These childhood memories have stuck with me throughout my life
+        and have given me a deep appreciation for the fantasy genre. I love
+        watching movies and series set in the middle ages, and my favorite strategy game
+        is Age of Empires II.
       </p>
       <p>
         Recently, I&apos;ve been exploring AI technology and have been working
         with a friend to train a model that recognizes specific creatures in a
-        video game. We&apos;re planning on creating an automated shiny catcher
-        that will train our creatures and look out for rare shiny ones.
-        It&apos;s been an exciting project, and I can&apos;t wait to see where
+        video game. We&apos;re planning on using the model to create an automated &quot;shiny catcher&quot;
+        that will both train our own creatures and catch any rare shiny ones it encounters.
+        It&apos;s been an exciting project so far, and I can&apos;t wait to see where
         it takes us.
       </p>
       <p>
         Aside from gaming, I&apos;m also interested in sports, particularly
-        cycling and bodybuilding. Cycling has been a part of my life since I was
-        a kid, and I&apos;ve recently taken up road cycling. Being a Norwegian,
-        winter is my favorite time of year. There&apos;s nothing quite like
-        taking a walk during winter and experiencing the serene beauty of the
-        snowy landscape.
+        cycling and bodybuilding. Cycling has always been a part of my life, since I was
+        a kid, and I&apos;ve recently taken up road cycling. However, despite enjoying summer activies a lot, I still am Norwegian,
+        and my favorite season of the year is winter.
       </p>
       <p>
         Overall, I&apos;m a passionate web developer with a wide range of
@@ -56,7 +55,7 @@ function AboutMe() {
         family up in the snowy mountains, have shaped my interests and given me
         a deep appreciation for nature, gaming, and the fantasy genre. I&apos;m
         committed to excellence in everything that I do, and I can&apos;t wait
-        to see where my career takes me next.
+        to see where my career will take me.
       </p>
     </ChildrenWrapper>
   );
@@ -76,10 +75,7 @@ export default function about() {
           About me
         </motion.h1>
         <AboutMe />
-        <motion.div
-          variants={topSmall}
-          className="flex flex-row justify-end"
-        >
+        <motion.div variants={topSmall} className="flex flex-row justify-end">
           <Link scroll={false} href="/" className="font-bold link">
             Back
           </Link>
