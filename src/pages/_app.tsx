@@ -5,8 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] })
 
-export default function App({ Component, pageProps, router }: AppProps) {
-  const url = router.route
+export default function App({ Component, pageProps }: AppProps) {
   
   return<>
       <style jsx global>{`
@@ -15,8 +14,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
         }
       `}</style>
     
-    <AnimatePresence mode='wait'>
-      <Component {...pageProps} key={url} />
+    <AnimatePresence>
+      <Component {...pageProps} />
         </AnimatePresence>
   </>
 }
