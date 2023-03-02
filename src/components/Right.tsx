@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import { right } from '@/animations/Animations';
+import { delayTime, right } from '@/animations/Animations';
 
 function DetailElement({ children, titleText}: { children: any, titleText: string}) {
             return <div className='flex flex-col'>
@@ -20,14 +20,18 @@ function DetailElement({ children, titleText}: { children: any, titleText: strin
     return age;
   }
 
-export default function Right() {
+export default function Right({width}: {width: number}) {
     return (
       <motion.div
+        layout
+          key='Details'
           initial={right.initial}
           animate={right.animate}
           exit={right.exit}
-          transition={{ delay: .8, type: 'spring', duration: 1 }}
-        className='flex flex-col gap-2 text-right w-32 pt-12'>
+          transition={{ delay: delayTime * 4, type: 'spring', duration: 1 }}
+        className={`flex flex-col gap-2 text-right pt-12`}
+      style={{width:width}}
+      >
         <h1 className='font-bold text-3xl'>Details</h1>
           <div className='flex flex-col gap-8'>
             <DetailElement titleText='Age'>

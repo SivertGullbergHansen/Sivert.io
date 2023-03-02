@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "framer-motion"
-import { bottom } from '@/animations/Animations'
+import { bottom, delayTime } from '@/animations/Animations'
 
 export default function Middle() {
   return (<motion.div
+        layout
     className='cursor-grab active:cursor-grabbing'
     drag
+    key='photograph'
     dragConstraints={{
       left: 0,
       right: 0,
@@ -18,12 +20,13 @@ export default function Middle() {
           initial={bottom.initial}
           animate={bottom.animate}
           exit={bottom.exit}
-          transition={{ delay: .6, type: 'spring', duration: 1 }}
+          transition={{ delay: delayTime, type: 'spring', duration: 1 }}
   >
                 <Image
             src='/img/Sivert_optimized.jpeg'
             width={512}
-            height={512}
+      height={512}
+      priority
             alt='Portrait photograph of Sivert'
             className='w-[333px] h-[512px] pointer-events-none rounded-full border-solid border-black border-2 object-cover'
           />

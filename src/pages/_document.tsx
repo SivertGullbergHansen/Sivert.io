@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body className='bg-base-100'>
-        <AnimatePresence>
+        <AnimatePresence mode='wait'>
           <Main />
           <NextScript />  
         </AnimatePresence>
