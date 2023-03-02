@@ -17,9 +17,9 @@ export default function Middle() {
     }}
     dragElastic={.5}
     dragTransition={{bounceDamping: 20, bounceStiffness: 500}}
-          initial={{ opacity: 0, y: '200px' }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: '-200px' }}
+          initial={bottom.initial}
+          animate={bottom.animate}
+          exit={bottom.exit}
           transition={{ delay: delayTime, type: 'spring', duration: 1 }}
   >
                 <Image
