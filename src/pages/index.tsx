@@ -8,7 +8,7 @@ const sidebarWidth = 192;
 
 export default function Home() {
   return (
-    <main className="w-screen sm:h-screen py-16 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
+    <main className="w-screen sm:h-screen py-8 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
       <motion.div
         layout
         variants={top}
