@@ -1,3 +1,5 @@
+export const delayTime = .2
+
 export const top = {
     initial: { opacity: 0, y: -200 },
     animate: { opacity: 1, y: 0 },
