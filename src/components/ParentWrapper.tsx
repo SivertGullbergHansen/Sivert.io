@@ -1,19 +1,34 @@
-import { delayTime } from '@/animations/Animations'
-import React from 'react'
-import { motion } from "framer-motion"
+import React from "react";
+import { motion } from "framer-motion";
 
-export default function ParentWrapper({children, className, style, delayChildren, staggerChildren}: {children: any, className?: string, style?: any, delayChildren: number, staggerChildren: number}) {
+export default function ParentWrapper({
+  children,
+  className,
+  style,
+  delayChildren,
+  staggerChildren,
+}: {
+  children: any;
+  className?: string;
+  style?: any;
+  delayChildren: number;
+  staggerChildren: number;
+}) {
   return (
-      <motion.div
+    <motion.div
       className={className}
       style={style}
-        layout
-        key='Left'
-        variants={{}}
-    initial="initial"
-        animate="animate"
-        exit='exit'
-          transition={{ delayChildren: delayChildren, type: 'spring', duration: 1, staggerChildren: staggerChildren }}
-      >{children}</motion.div>
-  )
+      layout
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{
+        delayChildren: delayChildren,
+        type: "spring",
+        staggerChildren: staggerChildren,
+      }}
+    >
+      {children}
+    </motion.div>
+  );
 }

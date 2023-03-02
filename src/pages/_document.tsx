@@ -32,10 +32,8 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className='bg-base-100'>
-        <AnimatePresence mode='wait'>
           <Main />
           <NextScript />  
-        </AnimatePresence>
       </body>
     </Html>
   )

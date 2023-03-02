@@ -1,5 +1,5 @@
 import React from "react";
-import { delayTime, left, leftSmall, topSmall } from "@/animations/Animations";
+import { bottomSmall, delayTime, leftSmall, staggerTime, topSmall } from "@/animations/Animations";
 import ChildrenWrapper from "./ChildrenWrapper";
 import ParentWrapper from "./ParentWrapper";
 
@@ -12,11 +12,11 @@ function DetailElement({
 }) {
   return (
     <div className="flex flex-col">
-      <ChildrenWrapper variants={topSmall}>
+      <ChildrenWrapper  variants={leftSmall}>
         <h2 className="text-md">{titleText}</h2>
       </ChildrenWrapper>
-      <ChildrenWrapper variants={topSmall}>
-        <h3 className="text-2xl font-bold">{children}</h3>
+      <ChildrenWrapper className="text-2xl font-bold" variants={leftSmall}>
+        {children}
       </ChildrenWrapper>
     </div>
   );
@@ -24,7 +24,7 @@ function DetailElement({
 
 function SocialLink({ titleText, href }: { titleText: string; href: string }) {
   return (
-    <ChildrenWrapper variants={topSmall}>
+    <ChildrenWrapper  variants={leftSmall}>
       <a className="text-md link" target="_blank" href={href}>
         {titleText}
       </a>
@@ -35,15 +35,17 @@ function SocialLink({ titleText, href }: { titleText: string; href: string }) {
 export default function Left({ width }: { width: number }) {
   return (
     <ParentWrapper
-      delayChildren={delayTime * 4}
-      staggerChildren={.1}
+      delayChildren={delayTime}
+      staggerChildren={staggerTime}
       className="flex flex-col gap-8 sm:order-1 order-2  sm:pt-12"
       style={{ width: width }}>
       <div className={`flex flex-col gap-2 text-left`}>
-        <ChildrenWrapper variants={leftSmall}>
+        <ChildrenWrapper  variants={leftSmall}>
           <h1 className="font-bold text-3xl">Education</h1>
         </ChildrenWrapper>
-        <DetailElement titleText="2023 - B.Sc. ">Web Development</DetailElement>
+        <DetailElement titleText="2023 - B.Sc. ">
+          <p>Web</p><p>Development</p>
+        </DetailElement>
       </div>
       <div className={`flex flex-col gap-2 text-left`}>
         <ChildrenWrapper variants={leftSmall}>
