@@ -80,7 +80,7 @@ export default function about() {
           variants={topSmall}
           className="flex flex-row justify-end"
         >
-          <Link href="/" className="font-bold link">
+          <Link scroll={false} href="/" className="font-bold link">
             Back
           </Link>
         </motion.div>

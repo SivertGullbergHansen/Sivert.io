@@ -37,7 +37,7 @@ export default function Middle() {
     <ChildrenWrapper
       variants={right}
       className='flex flex-row justify-center'
-      ><Link href='/about' className="font-bold btn text-xl btn-outline">About me</Link></ChildrenWrapper>
+      ><Link scroll={false} href='/about' className="font-bold btn text-xl btn-outline">About me</Link></ChildrenWrapper>
    </ParentWrapper>
   );
 }
