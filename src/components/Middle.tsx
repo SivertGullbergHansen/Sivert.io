@@ -6,7 +6,9 @@ import { bottom, delayTime } from '@/animations/Animations'
 export default function Middle() {
   return (<motion.div
         layout
-    className='cursor-grab active:cursor-grabbing'
+    className='cursor-grab active:cursor-grabbing sm:order-2
+    md:w-[333px] md:max-w-[333px] md:min-w-[333px] md:h-[512px] w-[256px] max-w-[256px] min-w-[256px] h-[420px]
+    '
     drag
     key='photograph'
     dragConstraints={{
@@ -16,10 +18,11 @@ export default function Middle() {
       bottom: 0
     }}
     dragElastic={.5}
-    dragTransition={{bounceDamping: 20, bounceStiffness: 500}}
-          initial={bottom.initial}
-          animate={bottom.animate}
-          exit={bottom.exit}
+    dragTransition={{ bounceDamping: 20, bounceStiffness: 500 }}
+    variants={bottom}
+    animate='animate'
+    initial='initial'
+    exit='exit'
           transition={{ delay: delayTime, type: 'spring', duration: 1 }}
   >
                 <Image
@@ -28,7 +31,7 @@ export default function Middle() {
       height={512}
       priority
             alt='Portrait photograph of Sivert'
-            className='w-[333px] h-[512px] pointer-events-none rounded-full border-solid border-black border-2 object-cover'
+      className='w-full h-full pointer-events-none rounded-full border-solid border-black border-2 object-cover'
           />
     </motion.div>
   )

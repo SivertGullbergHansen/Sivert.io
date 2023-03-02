@@ -1,6 +1,5 @@
 import { delayTime, top } from '@/animations/Animations'
 import { motion } from "framer-motion"
-import Head from 'next/head'
 import React from 'react'
 
 function AboutMe() {
@@ -30,10 +29,10 @@ export default function about() {
           transition={{ delay: delayTime, type: 'spring', duration: 1 }}
           className='w-full text-center font-bold flex flex-col gap-2'>
         <h1 className='text-4xl font-bold'>About me</h1>
-        </motion.div>
-              <div className='flex flex-row gap-16'>
-                  <AboutMe />
-        </div>
+        </motion.div>    
+          <div className='flex flex-row gap-16'>    
+              <AboutMe />
+          </div>
       </main>
   )
 }

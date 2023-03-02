@@ -1,11 +1,16 @@
 import React from 'react'
-import { motion } from "framer-motion"
-import { delayTime, right } from '@/animations/Animations';
+import { delayTime, right, rightSmall, topSmall } from '@/animations/Animations';
+import ParentWrapper from './ParentWrapper';
+import ChildrenWrapper from './ChildrenWrapper';
 
 function DetailElement({ children, titleText}: { children: any, titleText: string}) {
-            return <div className='flex flex-col'>
-              <h2 className='text-md'>{ titleText }</h2>
+  return <div className='flex flex-col'>
+              <ChildrenWrapper variants={topSmall}>
+      <h2 className='text-md'>{titleText}</h2>
+      </ChildrenWrapper>
+              <ChildrenWrapper variants={topSmall}>
               <h3 className='text-2xl font-bold'>{ children }</h3>
+      </ChildrenWrapper>
             </div>
 }
 
@@ -22,17 +27,14 @@ function DetailElement({ children, titleText}: { children: any, titleText: strin
 
 export default function Right({width}: {width: number}) {
     return (
-      <motion.div
-        layout
-          key='Details'
-          initial={right.initial}
-          animate={right.animate}
-          exit={right.exit}
-          transition={{ delay: delayTime * 4, type: 'spring', duration: 1 }}
-        className={`flex flex-col gap-2 text-right pt-12`}
+      <ParentWrapper
+        delayChildren={delayTime * 4}
+        staggerChildren={.1}
+        className='flex flex-col gap-2 sm:text-right sm:pt-12 order-1 sm:order-3'
       style={{width:width}}
       >
-        <h1 className='font-bold text-3xl'>Details</h1>
+              <ChildrenWrapper variants={rightSmall}>
+        <h1 className='font-bold text-3xl'>Details</h1></ChildrenWrapper>
           <div className='flex flex-col gap-8'>
             <DetailElement titleText='Age'>
               { getAge("1998/06/05") }
@@ -44,6 +46,6 @@ export default function Right({width}: {width: number}) {
               { getAge("2021/08/01") }
           </DetailElement>
           </div>
-          </motion.div>
+          </ParentWrapper>
   )
 }

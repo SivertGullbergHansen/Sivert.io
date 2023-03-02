@@ -1,29 +1,28 @@
-import Left from '@/components/Left';
-import Middle from '@/components/Middle';
-import Right from '@/components/Right';
-import Head from 'next/head'
+import Left from '@/components/Left'
+import Middle from '@/components/Middle'
+import Right from '@/components/Right'
 import { motion } from "framer-motion"
-import { delayTime, top } from '@/animations/Animations'
+import { bottom, delayTime, top, topSmall } from '@/animations/Animations'
 
 const sidebarWidth = 192
 
-
 export default function Home() {
   return (
-      <main className='w-screen h-screen overflow-hidden grid place-content-center gap-16'>
+      <main className='w-screen sm:h-screen py-24 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16'>
         <motion.div
         layout
-          key='Title'
-          initial={top.initial}
-          animate={top.animate}
-          exit={top.exit}
+        key='Title'
+        variants={top}
+        animate='animate'
+        exit='exit'
+        initial='initial'
           transition={{ delay: delayTime * 2, type: 'spring', duration: 1 }}
           className='w-full text-center font-bold flex flex-col gap-2'>
-        <h1 className='text-4xl font-bold'>Sivert Gullberg Hansen</h1>
-        <h2 className='text-3xl font-medium'>Full-Stack Developer</h2>
+        <h1 className='sm:text-4xl text-3xl font-bold'>Sivert Gullberg Hansen</h1>
+        <h2 className='sm:text-3xl text-2xl font-medium'>Full-Stack Developer</h2>
         </motion.div>
-        <div className='flex flex-row gap-16'>
-          <Left width={sidebarWidth}/>
+        <div className='flex sm:flex-row flex-col sm:gap-16 gap-8'>
+          <Left width={sidebarWidth} />
           <Middle />
           <Right width={sidebarWidth}/>
         </div>
