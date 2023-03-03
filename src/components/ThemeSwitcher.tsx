@@ -24,7 +24,7 @@ const ThemeSwitch = () => {
   }
 
   return (
-      <div className="flex flex-row gap-2 fixed top-6 left-6 place-items-center bg-base-300 px-1.5 py-1.5 rounded-full opacity-25 hover:opacity-100">
+      <div className="flex flex-row gap-2 fixed top-4 left-4 place-items-center bg-base-300 px-1.5 py-1.5 rounded-full opacity-25 hover:opacity-100">
           <input onChange={e => {
             setTheme(theme === dark ? light : dark)
           }} type="checkbox" className="toggle" checked={theme === light} />
