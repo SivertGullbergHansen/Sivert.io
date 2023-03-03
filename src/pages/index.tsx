@@ -15,7 +15,7 @@ export default function Home() {
         <title>Sivert Gullberg Hansen</title>
       </Head>
         <ThemeSwitch />
-    <main className="w-screen sm:h-screen py-8 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
+    <main className="w-screen sm:h-screen py-16 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
       <motion.div
         layout
         variants={top}
@@ -32,7 +32,7 @@ export default function Home() {
           Full-Stack Developer
         </h2>
       </motion.div>
-      <div className="flex sm:flex-row flex-col sm:gap-16 gap-8">
+      <div className="flex sm:flex-row flex-col lg:gap-16 md:gap-6 gap-0">
         <Left width={sidebarWidth} />
         <Middle />
         <Right width={sidebarWidth} />

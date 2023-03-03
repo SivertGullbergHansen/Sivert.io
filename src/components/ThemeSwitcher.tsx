@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import { BsFillLightbulbOffFill, BsFillLightbulbFill } from 'react-icons/bs'
