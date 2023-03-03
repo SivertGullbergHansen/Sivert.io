@@ -3,11 +3,16 @@ import Middle from "@/components/Middle";
 import Right from "@/components/Right";
 import { motion } from "framer-motion";
 import { top } from "@/animations/Animations";
+import Head from "next/head";
 
 const sidebarWidth = 192;
 
 export default function Home() {
   return (
+    <>
+      <Head>
+        <title>Sivert Gullberg Hansen</title>
+      </Head>
     <main className="w-screen sm:h-screen py-8 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
       <motion.div
         layout
@@ -17,7 +22,7 @@ export default function Home() {
         initial="initial"
         transition={{ type: "spring", duration: 1 }}
         className="w-full text-center font-bold flex flex-col gap-2"
-      >
+        >
         <h1 className="sm:text-4xl text-3xl font-bold">
           Sivert Gullberg Hansen
         </h1>
@@ -31,5 +36,6 @@ export default function Home() {
         <Right width={sidebarWidth} />
       </div>
     </main>
+        </>
   );
 }

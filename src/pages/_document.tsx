@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-title-in-document-head */
 import { Html, Head, Main, NextScript } from 'next/document'
-import { AnimatePresence } from 'framer-motion'
 
 const description = "Experienced full-stack developer by day, avid game developer by night"
 const title = "Sivert Gullberg Hansen"
@@ -11,7 +9,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-<title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 

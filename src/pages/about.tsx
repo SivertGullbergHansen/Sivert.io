@@ -2,6 +2,7 @@ import { staggerTime, topSmall } from "@/animations/Animations";
 import ChildrenWrapper from "@/components/ChildrenWrapper";
 import ParentWrapper from "@/components/ParentWrapper";
 import { motion } from "framer-motion";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -62,16 +63,20 @@ function AboutMe() {
 }
 export default function about() {
   return (
+    <>
+      <Head>
+        <title>About Sivert Gullberg Hansen</title>
+      </Head>
     <main className="w-screen sm:h-screen py-8 px-4 overflow-hidden grid place-content-center gap-16">
       <ParentWrapper
         delayChildren={0}
         staggerChildren={staggerTime}
         className="flex flex-col gap-4 md:w-[640px] sm:w-[480px]"
-      >
+        >
         <motion.h1
           variants={topSmall}
           className="text-4xl text-center font-bold"
-        >
+          >
           About me
         </motion.h1>
         <AboutMe />
@@ -82,5 +87,6 @@ export default function about() {
         </motion.div>
       </ParentWrapper>
     </main>
+          </>
   );
 }
