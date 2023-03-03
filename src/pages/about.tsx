@@ -66,7 +66,7 @@ export default function about() {
   return (
     <>
       <Head>
-        <title>About Sivert Gullberg Hansen</title>
+        <title>Sivert Gullberg Hansen - About</title>
       </Head>
         <ThemeSwitch />
     <main className="w-screen sm:h-screen py-8 px-4 overflow-hidden grid place-content-center gap-16">
