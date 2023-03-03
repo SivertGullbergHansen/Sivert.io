@@ -16,4 +16,5 @@ module.exports = {
   daisyui: {
     themes: ['cmyk', 'dracula'],
   },
+  darkMode: 'class'
 }
