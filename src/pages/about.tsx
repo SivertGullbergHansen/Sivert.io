@@ -69,7 +69,7 @@ export default function about() {
         <title>Sivert Gullberg Hansen - About</title>
       </Head>
         <ThemeSwitch />
-    <main className="w-screen sm:h-screen py-8 px-4 overflow-hidden grid place-content-center gap-16">
+    <main className="w-screen sm:h-screen py-16 px-4 overflow-hidden grid place-content-center gap-16">
       <ParentWrapper
         delayChildren={0}
         staggerChildren={staggerTime}
