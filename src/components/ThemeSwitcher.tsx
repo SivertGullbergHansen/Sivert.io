@@ -7,13 +7,15 @@ const dark = 'dark'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
-    const { theme, setTheme } = useTheme()
-    console.log(theme);
-    
+  const { theme, setTheme } = useTheme()
+  console.log(theme);
+  
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true)
+
+    if (theme === 'system') setTheme(dark)
   }, [])
 
   if (!mounted) {
@@ -26,7 +28,7 @@ const ThemeSwitch = () => {
           <input onChange={e => {
               setTheme(theme === dark ? light : dark)
           }} type="checkbox" className="toggle" checked={theme === light} />
-      <BsFillLightbulbFill className={`${theme === dark ? "opacity-0" : "opacity-100"}`} />
+      <BsFillLightbulbFill className={`${theme !== light ? "opacity-0" : "opacity-100"}`} />
     </div>
   )
 }

@@ -1,4 +1,3 @@
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import "@/styles/globals.scss";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
@@ -18,7 +17,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           font-family: ${roboto.style.fontFamily};
         }
       `}</style>
-    <ThemeProvider value={{ light: 'cmyk', dark: 'dracula' }}>
+    <ThemeProvider value={{ light: 'cmyk', dark: 'dracula', system: 'dracula' }}>
       <AnimatePresence
         mode="wait"
         onExitComplete={() => {
