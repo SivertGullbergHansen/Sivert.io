@@ -9,7 +9,7 @@ const metaImg = "/meta/meta.png"
 
 export default function Document() {
   return (
-    <Html className='bg-base-100' lang="en">
+    <Html lang="en">
       <Head>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
@@ -30,7 +30,7 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className='bg-base-100' id='root'>
+      <body id='root'>
           <Main />
           <NextScript />  
       </body>
