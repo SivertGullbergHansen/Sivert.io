@@ -69,15 +69,14 @@ export default function about() {
         <title>Sivert Gullberg Hansen - About</title>
       </Head>
         <ThemeSwitch />
-    <main className="w-screen sm:h-screen py-16 px-4 overflow-hidden grid place-content-center gap-12">
+    <main className="min-h-screen py-8 px-4 overflow-hidden lg:py-12 flex flex-col place-items-center">
       <ParentWrapper
         delayChildren={0}
         staggerChildren={staggerTime}
-        className="flex flex-col gap-4 md:w-[640px] sm:w-[480px]"
+        className="prose lg:prose-xl max-w-prose"
         >
         <motion.h1
           variants={topSmall}
-          className="text-4xl text-center font-bold"
           >
           About me
         </motion.h1>
