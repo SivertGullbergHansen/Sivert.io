@@ -32,7 +32,7 @@ export default function Home() {
           Full-Stack Developer
         </h2>
       </motion.div>
-      <div className="flex sm:flex-row flex-col lg:gap-16 md:gap-6 gap-0">
+      <div className="flex sm:flex-row flex-col lg:gap-16 gap-6">
         <Left width={sidebarWidth} />
         <Middle />
         <Right width={sidebarWidth} />
