@@ -57,6 +57,9 @@ export default function Right({ width }: { width: number }) {
         <DetailElement titleText="Years of Experience">
           {getAge("2021/08/01")}
         </DetailElement>
+        <DetailElement titleText="Publications">
+          1
+        </DetailElement>
       </div>
     </ParentWrapper>
   );
