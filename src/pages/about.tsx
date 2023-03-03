@@ -1,6 +1,7 @@
 import { staggerTime, topSmall } from "@/animations/Animations";
 import ChildrenWrapper from "@/components/ChildrenWrapper";
 import ParentWrapper from "@/components/ParentWrapper";
+import ThemeSwitch from "@/components/ThemeSwitcher";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
@@ -67,6 +68,7 @@ export default function about() {
       <Head>
         <title>About Sivert Gullberg Hansen</title>
       </Head>
+        <ThemeSwitch />
     <main className="w-screen sm:h-screen py-8 px-4 overflow-hidden grid place-content-center gap-16">
       <ParentWrapper
         delayChildren={0}

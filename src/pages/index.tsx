@@ -4,6 +4,7 @@ import Right from "@/components/Right";
 import { motion } from "framer-motion";
 import { top } from "@/animations/Animations";
 import Head from "next/head";
+import ThemeSwitch from "@/components/ThemeSwitcher";
 
 const sidebarWidth = 192;
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Head>
         <title>Sivert Gullberg Hansen</title>
       </Head>
+        <ThemeSwitch />
     <main className="w-screen sm:h-screen py-8 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
       <motion.div
         layout
