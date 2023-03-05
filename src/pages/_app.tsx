@@ -17,7 +17,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           font-family: ${roboto.style.fontFamily};
         }
       `}</style>
-    <ThemeProvider value={{ light: 'cmyk', dark: 'dracula', system: 'dracula' }}>
+    <ThemeProvider value={{ light: 'cmyk', dark: 'business', system: 'business' }}>
       <AnimatePresence
         mode="wait"
         onExitComplete={() => {
