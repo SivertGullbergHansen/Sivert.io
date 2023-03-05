@@ -1,5 +1,5 @@
 <div align=center>
-<h1>blog.sivert.io</h1>
+<h1>Sivert.io</h1>
 <img src='docs/screenshot.png' />
 </div>
 
