@@ -4,8 +4,8 @@ import React from "react";
 
 const description = "Experienced full-stack developer by day, avid game developer by night"
 const title = "Sivert Gullberg Hansen"
-const url = "https://www.sivert.xyz/"
-const metaImg = "/meta/meta.png"
+const url = "https://www.sivert.io/"
+const metaImg = "/meta/meta_dark.png"
 
 export default function Document() {
   return (
