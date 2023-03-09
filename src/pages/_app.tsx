@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Roboto } from "next/font/google";
+import Head from "next/head";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -12,6 +13,9 @@ const roboto = Roboto({
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <style jsx global>{`
         html {
           font-family: ${roboto.style.fontFamily};

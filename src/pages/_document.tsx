@@ -26,7 +26,6 @@ export default function Document() {
 <meta property="twitter:image" content={metaImg} />
 
         <meta name="theme-color" content="#000000" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body id='root' className='w-full h-full overflow-auto'>
