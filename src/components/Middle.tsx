@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { bottom, bottomSmall, right } from "@/animations/Animations";
+import { bottom, right } from "@/animations/Animations";
 import Link from "next/link";
 import ChildrenWrapper from "./ChildrenWrapper";
 import ParentWrapper from "./ParentWrapper";
+
+import sivert from './blue.png'
 
 export default function Middle() {
   return ( <ParentWrapper delayChildren={0} staggerChildren={0.1} className="sm:order-2 flex flex-col gap-12">
@@ -26,7 +28,8 @@ export default function Middle() {
       transition={{ type: "spring", duration: 1 }}
     >
       <Image
-        src="/img/Sivert_optimized.jpeg"
+        src={sivert}
+        placeholder='blur'
         width={512}
         height={512}
         priority
