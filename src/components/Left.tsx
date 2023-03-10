@@ -63,7 +63,6 @@ export default function Left({ width }: { width: number }) {
           titleText="ORCID"
           href="https://orcid.org/0000-0001-7555-2983"
         />
-        <SocialLink titleText="Blog" href="https://blog.sivert.xyz" />
       </div>
     </ParentWrapper>
   );

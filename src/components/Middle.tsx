@@ -45,7 +45,7 @@ export default function Middle() {
       <div className="flex flex-row w-0 justify-center gap-6 font-bold text-xl">
         <ChildrenWrapper variants={right}>
           <Link scroll={false} href="/about" className="btn btn-outline">
-            About me
+            About
           </Link>
           <Link scroll={false} href="/projects" className="btn btn-outline">
             Projects

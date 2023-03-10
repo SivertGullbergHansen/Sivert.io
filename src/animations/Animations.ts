@@ -1,8 +1,8 @@
 export const delayTime = 0
 export const staggerTime = .05
 const exitDuration = .33
-const smallMove = 50
-const largeMove = 100
+const smallMove = 25
+const largeMove = 50
 const exitAnimation = { opacity: 0, y: -5, transition: { duration: exitDuration, type: 'spring' } }
 const enterTransition = { type: 'spring', stiffness: 200 }
 
