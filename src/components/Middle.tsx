@@ -13,7 +13,7 @@ export default function Middle() {
     <ParentWrapper
       delayChildren={0}
       staggerChildren={0.1}
-      className="sm:order-2 flex flex-col gap-12"
+      className="sm:order-2 flex flex-col gap-12 items-center"
     >
       <motion.div
         layout
@@ -42,7 +42,7 @@ export default function Middle() {
           className="w-full h-full pointer-events-none rounded-full border-solid border-black border-2 object-cover"
         />
       </motion.div>
-      <div className="flex flex-row justify-between gap-6 font-bold text-xl">
+      <div className="flex flex-row w-0 justify-center gap-6 font-bold text-xl">
         <ChildrenWrapper variants={right}>
           <Link scroll={false} href="/about" className="btn btn-outline">
             About me
