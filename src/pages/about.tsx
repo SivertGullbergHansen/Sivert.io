@@ -10,45 +10,45 @@ import React from "react";
 function AboutMe() {
   return (
     <ChildrenWrapper variants={topSmall}>
+      <p>Hey there!👋</p>
       <p>
-        Hey there!👋
-      </p>
-      <p>My name is Sivert, and I&apos;ve been a coding enthusiast
-        ever since I was a kid. I started experimenting with coding at a young
-        age, and I&apos;ve been hooked ever since. I now have around 7 years of
-        coding experience, and I&apos;ve been working professionally as a
-        Full-stack developer for about a year.
+        My name is Sivert, and I&apos;ve been a coding enthusiast ever since I
+        was a kid. I started experimenting with coding at a young age, and
+        I&apos;ve been hooked ever since. I now have around 7 years of coding
+        experience, and I&apos;ve been working professionally as a Full-stack
+        developer for about a year.
       </p>
       <p>
-        When I&apos;m not at work, I love spending my
-        evenings working on my own game development projects. I&apos;m a big fan
-        of game engines like Unity, Unreal Engine and Roblox, and I&apos;ve
-        gained a small following on Twitter where I share sneak peeks of my
-        latest indie dev projects.
+        When I&apos;m not at work, I love spending my evenings working on my own
+        game development projects. I&apos;m a big fan of game engines like
+        Unity, Unreal Engine and Roblox, and I&apos;ve gained a small following
+        on Twitter where I share sneak peeks of my latest indie dev projects.
       </p>
       <p>
         Growing up, my family and I used to spend our holidays up in the snowy
-        mountains. In winter we would go cross-country skiing, and during summer we would hike and fish. Our cabin up there, which my
-        grandfather built, holds many special memories to me. It&apos;s where my
-        brother and I used to pretend we were the characters from Lord of the
-        Rings, fighting orcs and trolls as if we were the heroes from the movie
-        series (I would be Legolas and he would be Aragorn). These childhood memories have stuck with me throughout my life
-        and have given me a deep appreciation for the fantasy genre. I love
-        watching movies and series set in the middle ages, and my favorite strategy game
-        is Age of Empires II.
+        mountains. In winter we would go cross-country skiing, and during summer
+        we would hike and fish. Our cabin up there, which my grandfather built,
+        holds many special memories to me. It&apos;s where my brother and I used
+        to pretend we were the characters from Lord of the Rings, fighting orcs
+        and trolls as if we were the heroes from the movie series (I would be
+        Legolas and he would be Aragorn). These childhood memories have stuck
+        with me throughout my life and have given me a deep appreciation for the
+        fantasy genre. I love watching movies and series set in the middle ages,
+        and my favorite strategy game is Age of Empires II.
       </p>
       <p>
         Recently, I&apos;ve been exploring AI technology and have been working
         with a friend to train a model that recognizes specific creatures in a
-        video game. We&apos;re planning on using the model to create an automated &quot;shiny catcher&quot;
-        that will both train our own creatures and catch any rare shiny ones it encounters.
-        It&apos;s been an exciting project so far, and I can&apos;t wait to see where
-        it takes us.
+        video game. We&apos;re planning on using the model to create an
+        automated &quot;shiny catcher&quot; that will both train our own
+        creatures and catch any rare shiny ones it encounters. It&apos;s been an
+        exciting project so far, and I can&apos;t wait to see where it takes us.
       </p>
       <p>
         Aside from gaming, I&apos;m also interested in sports, particularly
-        cycling and bodybuilding. Cycling has always been a part of my life, since I was
-        a kid, and I&apos;ve recently taken up road cycling. However, despite enjoying summer activies a lot, I still am Norwegian,
+        cycling and bodybuilding. Cycling has always been a part of my life,
+        since I was a kid, and I&apos;ve recently taken up road cycling.
+        However, despite enjoying summer activies a lot, I still am Norwegian,
         and my favorite season of the year is winter.
       </p>
       <p>
@@ -68,26 +68,22 @@ export default function about() {
       <Head>
         <title>Sivert Gullberg Hansen - About</title>
       </Head>
-        <ThemeSwitch />
-    <main className="min-h-screen py-16 px-4 overflow-hidden lg:py-12 flex flex-col place-items-center">
-      <ParentWrapper
-        delayChildren={0}
-        staggerChildren={staggerTime}
-        className="prose lg:prose-xl max-w-prose"
+      <ThemeSwitch />
+      <main className="min-h-screen py-16 px-4 overflow-hidden lg:py-12 flex flex-col place-items-center">
+        <ParentWrapper
+          delayChildren={0}
+          staggerChildren={staggerTime}
+          className="prose lg:prose-xl max-w-prose"
         >
-        <motion.h1
-          variants={topSmall}
-          >
-          About me
-        </motion.h1>
-        <AboutMe />
-        <motion.div variants={topSmall} className="flex flex-row justify-end">
-          <Link scroll={false} href="/" className="font-bold link">
-            Back
-          </Link>
-        </motion.div>
-      </ParentWrapper>
-    </main>
-          </>
+          <motion.h1 variants={topSmall}>About me</motion.h1>
+          <AboutMe />
+          <motion.div variants={topSmall} className="flex flex-row justify-end">
+            <Link scroll={false} href="/" className="font-bold link">
+              Back
+            </Link>
+          </motion.div>
+        </ParentWrapper>
+      </main>
+    </>
   );
 }
