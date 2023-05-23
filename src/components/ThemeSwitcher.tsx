@@ -28,7 +28,7 @@ const ThemeSwitch = () => {
   return (
     <div
       onClick={switchTheme}
-      className="flex flex-row gap-2 fixed top-4 left-4 place-items-center bg-base-300 p-1.5 rounded-full opacity-25 hover:opacity-100 hover:cursor-pointer"
+      className="flex flex-row gap-2 fixed top-4 left-4 place-items-center bg-base-300 p-1.5 rounded-full hover:cursor-pointer"
     >
       <input type="checkbox" className="toggle" checked={theme === light} />
       {theme !== light ? <BsFillLightbulbOffFill /> : null}

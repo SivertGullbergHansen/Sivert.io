@@ -32,7 +32,7 @@ export default function Document() {
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body id="root" className="w-full h-full overflow-auto">
+      <body id="root" className="h-full overflow-x-hidden scroll-smooth">
         <Main />
         <NextScript />
       </body>

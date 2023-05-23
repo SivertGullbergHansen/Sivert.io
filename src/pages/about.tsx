@@ -1,47 +1,21 @@
 import { staggerTime, topSmall } from "@/animations/Animations";
+import BackButton from "@/components/BackButton";
 import ChildrenWrapper from "@/components/ChildrenWrapper";
 import ParentWrapper from "@/components/ParentWrapper";
 import ThemeSwitch from "@/components/ThemeSwitcher";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import Link from "next/link";
 import React from "react";
 
 function AboutMe() {
   return (
     <ChildrenWrapper variants={topSmall}>
-      <p>Hello! 👋</p>
-      <p>
-        My name is Sivert, and I&apos;ve been a coding enthusiast ever since I was a
-        kid.
-      </p>
-      <p>
-        I started experimenting with coding at a young age, and have been hooked
-        ever since. I now have about 7 years of coding experience, and have been
-        working professionally with full-stack development for about 1.5 years.
-      </p>
-
-      <p>
-        When I&apos;m not at work, I love spending my time working on my own game
-        development projects. I&apos;m a big fan of the game engines Unity, Unreal
-        Engine and Roblox, and have recently gained a small following on
-        Twitter, where I share insights to my latest projects.
-      </p>
-
-      <p>
-        Recently, I&apos;ve been exploring AI technology and have been working with a
-        friend, Ola Hulleberg, to train a model that recognizes specific
-        creatures in a video game. We plan to use the model to create an
-        automated &quot;shiny-catcher&quot; that will both train our own creatures and
-        capture any rare creatures it encounters. It&apos;s been an exciting project
-        and I can&apos;t wait to see where it takes us.
-      </p>
-
-      <p>
-        All in all, I&apos;m a passionate developer with a wide range of interests.
-        I&apos;m committed to quality in everything I do, and I can&apos;t wait to see
-        where my career takes me.
-      </p>
+      <h2>Hello! 👋</h2>
+<p><b>My name is Sivert, and coding has been my passion since childhood.</b> I started experimenting with coding at a young age, and I&apos;ve been hooked ever since. With approximately 7 years of coding experience, I have developed a solid competence.</p>
+<p><b>Over the past 2 years, I have worked as a full-stack developer in professional teams.</b> This experience has provided valuable insights into working efficiently and collaborating seamlessly with others.</p>
+<p><b>During my free time, I indulge in game development.</b> I am a big fan of game engines like Unity, Unreal Engine, and Roblox, and I have been working with them since around 2015. It is a passion that brings me immense joy and fulfillment.</p>
+<p><b>Recently, I had the opportunity to explore AI technology with <a target='_blank' href='https://hulleberg.net'>Ola Hulleberg</a>.</b> We have been training a recognition model capable of identifying creatures in a video game. The goal is to enable the model to analyze screenshots from the game and make context-based decisions. This exciting project has opened up new horizons for me, and I eagerly anticipate the possibilities it holds.</p>
+<p><b>All in all, I am a dedicated developer with a wide range of interests. Quality is of utmost importance to me in everything I undertake, and I eagerly await the opportunities my career has in store.</b></p>
     </ChildrenWrapper>
   );
 }
@@ -60,11 +34,7 @@ export default function about() {
         >
           <motion.h1 variants={topSmall}>About me</motion.h1>
           <AboutMe />
-          <motion.div variants={topSmall} className="flex flex-row justify-end">
-            <Link scroll={false} href="/" className="font-bold link">
-              Back
-            </Link>
-          </motion.div>
+          <BackButton />
         </ParentWrapper>
       </main>
     </>

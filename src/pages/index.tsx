@@ -2,9 +2,10 @@ import Left from "@/components/Left";
 import Middle from "@/components/Middle";
 import Right from "@/components/Right";
 import { motion } from "framer-motion";
-import { top } from "@/animations/Animations";
+import { bottomSmall, top, topSmall } from "@/animations/Animations";
 import Head from "next/head";
 import ThemeSwitch from "@/components/ThemeSwitcher";
+import Link from "next/link";
 
 const sidebarWidth = 192;
 
@@ -15,7 +16,7 @@ export default function Home() {
         <title>Sivert Gullberg Hansen</title>
       </Head>
       <ThemeSwitch />
-      <main className="w-screen sm:h-screen py-16 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
+      <main id="main" className="w-screen sm:h-screen py-16 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
         <motion.div
           layout
           variants={top}
@@ -37,6 +38,22 @@ export default function Home() {
           <Middle />
           <Right width={sidebarWidth} />
         </div>
+        <motion.div variants={bottomSmall}
+        layout
+        animate="animate"
+        exit="exit"
+        initial="initial"
+        transition={{ type: "spring", duration: 1 }}
+        >
+        <Link href='#contact' className="btn btn-primary">Contact Me</Link>
+        </motion.div>
+      </main>
+      <main id="contact" className="w-screen sm:h-screen py-16 sm:p-0 md:overflow-hidden grid place-content-center justify-items-center gap-16">
+        <h1 className="font-bold text-6xl">Contact Me</h1>
+        
+<p className="text-center">Feel free to get in touch with me using my social links above or by sending me an email at <a href="mailto:contact@sivert.io" className="link link-primary">contact@sivert.io</a></p>
+
+        <Link href='#main' className="btn btn-primary">Back to top</Link>
       </main>
     </>
   );
