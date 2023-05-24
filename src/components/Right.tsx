@@ -22,7 +22,7 @@ function DetailElement({
       <ChildrenWrapper variants={rightSmall}>
         <h2 className="text-md">{titleText}</h2>
       </ChildrenWrapper>
-      <ChildrenWrapper  variants={rightSmall}>
+      <ChildrenWrapper variants={rightSmall}>
         <h3 className="text-2xl font-bold">{children}</h3>
       </ChildrenWrapper>
     </div>
@@ -55,11 +55,9 @@ export default function Right({ width }: { width: number }) {
         <DetailElement titleText="Age">{getAge("1998/06/05")}</DetailElement>
         <DetailElement titleText="Nationality">Norwegian</DetailElement>
         <DetailElement titleText="Years of Experience">
-          {getAge("2021/08/01")}
+          {getAge("2021/04/01")}
         </DetailElement>
-        <DetailElement titleText="Publications">
-          2
-        </DetailElement>
+        <DetailElement titleText="Publications">2</DetailElement>
       </div>
     </ParentWrapper>
   );
