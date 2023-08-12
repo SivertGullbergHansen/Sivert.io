@@ -6,7 +6,7 @@ import Link from "next/link";
 import ChildrenWrapper from "./ChildrenWrapper";
 import ParentWrapper from "./ParentWrapper";
 
-import sivert from "./blue.png";
+import sivert from "./IMG_0147.JPG";
 
 export default function Middle() {
   return (
